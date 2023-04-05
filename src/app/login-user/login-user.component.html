@@ -1,0 +1,63 @@
+<div>
+  <h2 class="flex justify-center text-lg text-red-400">AngularApp</h2>
+  <div class="flex justify-center">
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="handleLogin()"
+      class="border rounded-md px-10 py-10 bg- w-[500px] bg-white"
+    >
+      <div class="flex justify-center">
+        <img src="../../assets/img/logo.png" alt="" />
+      </div>
+      <div>
+        <p class="text-[#f58220] text-xl font-semibold text-center mt-2">
+          Sei già registrato? Accedi
+        </p>
+      </div>
+      <div class="mt-4">
+        <label htmlFor="exampleInputEmail1">ID di Accesso/Email</label>
+        <div class="relative">
+          <div
+            class="inline-flex items-center justify-center absolute left-0 top-0 mt-2.5 h-ful w-10 text-gray-400"
+          >
+            <i class="fas fa-user text-[#f58220]"></i>
+          </div>
+          <input
+            type="email"
+            class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-[#f58220]"
+            placeholder="Enter email"
+            formControlName="id"
+          />
+        </div>
+      </div>
+      <div class="mt-4">
+        <label>Password</label>
+        <div class="relative">
+          <div
+            class="inline-flex items-center justify-center absolute mt-2.5 left-0 top-0 h-ful w-10 text-gray-400"
+          >
+            <i class="fas fa-lock text-[#f58220]"></i>
+          </div>
+          <input
+            type="password"
+            class="text-sm placeholder-gray-500 pl-10 pr-4 rounded-2xl border border-gray-400 w-full py-2 focus:outline-none focus:border-[#f58220]"
+            id="exampleInputPassword1"
+            placeholder="Password"
+            formControlName="chiave"
+          />
+        </div>
+
+        <div></div>
+      </div>
+
+      <button
+        class="flex mt-4 items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-[#f58220] hover:bg-blue-6 rounded-2xl py-2 w-full transition duration-150 ease-in"
+      >
+        Accedi
+      </button>
+    </form>
+  </div>
+  <div *ngIf="showData">
+   <app-argomenti-data></app-argomenti-data>
+  </div>
+</div>

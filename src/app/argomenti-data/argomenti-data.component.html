@@ -1,0 +1,30 @@
+<div class="flex justify-center mt-10">
+  <div>
+    <div class="text-center text-xl">Indici Ricerca</div>
+    <table class="px-2 border py-2 overflow-x-auto">
+      <thead class="border-b">
+        <tr>
+          <th class="border-r px-2 py-1">IdListinoBase</th>
+          <th class="border-r px-2 py-1">IdPrev</th>
+          <th class="border-r px-2 py-1">InEvidenza</th>
+          <th class="border-r px-2 py-1">NomeListino</th>
+          <th class="border-r px-2 py-1">Prezzo1</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of argomentiData" class="border-b">
+          <td class="border-r px-2 py-1">{{item.idListinoBase}}</td>
+          <td class="border-r px-2 py-1">{{item.idPrev}}</td>
+          <td class="border-r px-2 py-1">{{item.inEvidenza}}</td>
+          <td class="border-r px-2 py-1">{{item.nomeListino}}</td>
+          <td class="border-r px-2 py-1">{{item.prezzo1}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <div class="flex justify-center">
+
+          <Link class="mt-5 border px-2 rounded-md w-24 text-center bg-[#f58220] text-white cursor-pointer" to="/">Home</Link>
+
+      </div> -->
+  </div>
+</div>
